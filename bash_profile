@@ -47,6 +47,7 @@ alias e='/Applications/Sublime\ Text\ \(3083\).app/Contents/SharedSupport/bin/su
 alias r='vim'
 alias a='atom'
 alias c='open -a /Applications/Google\ Chrome.app'
+alias n='nodemon'
 
 # Python 编译简化
 alias py='python'
@@ -71,7 +72,9 @@ export PS1="~: "
 alias ~='cd ~'                                         # cd ~
 alias ~script='cd ~/.script'                           # 进入自己脚本 shell 文件夹
 alias ~egoist='cd ~/Documents/Egoist/'
-alias ~c='cd /Users/Egoist/Documents/Egoist/C\ or\ C++\ File/'
+# alias ~c='cd /Users/Egoist/Documents/Egoist/C\ or\ C++\ File/'
+alias ~c='cd /Users/Egoist/Config'
+alias ~n='cd /Users/Egoist/CP/ex/NodeJS'
 alias ~oc='cd /Users/Egoist/Documents/Egoist/Objective-C/'
 alias ~py='cd ~/Documents/Egoist/Python/'
 alias ~python='cd ~/Documents/Egoist/Python/'
@@ -79,6 +82,7 @@ alias ~js='cd ~/Documents/Egoist/js/pure\ js'              # 该js目录做为�
 alias ~blog='cd /Users/Egoist/Sites/blog-example/blog'     # 快速进入 blog 目录，往后可能直接通过脚本实现
 alias ~igoist='cd /Users/Egoist/Sites/igoist.github.io2'   # 不多解释
 alias ~l='cd ~/LeetCodes'
+alias ~ui='cd ~/Sites/igoist-preparation'
 alias ~wb='cd /Users/Egoist/Sites/Web/demos/'              # Web demos 常用目录
 alias ~draft='cd /Users/Egoist/Sites/Web/draft/'           # Web draft 常用目录
 
@@ -108,10 +112,13 @@ export PATH=/usr/local/mongodb/mongodb-osx-x86_64-3.4.4/bin:$PATH
 
 # ================ 前端 ==================
 alias scss='sass style.scss:style.css --watch'
-alias scss2='sass sass/style.scss:css/style.css --watch'
+alias scss2='sass scss/style.scss:css/style.css --watch'
+alias t='touch index.html style.scss'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+alias jj='juejin'
 
 # yarn
 # export PATH="$PATH:/usr/local/Cellar/yarn/0.24.6/bin"
