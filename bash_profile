@@ -131,3 +131,9 @@ eval "$(pyenv virtualenv-init -)"
 
 # added by Anaconda2 installer
 export PATH="/usr/local/Cellar/anaconda2/bin:$PATH"
+
+
+
+# new
+stty -ixon
+

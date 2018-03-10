@@ -145,5 +145,10 @@ set shortmess+=A
 
 " custom
 imap fd <Esc>
-
 let g:airline_theme = 'simple'
+
+" key map
+" nmap <C-s> :w<CR>
+nmap <C-s> :update<CR>
+vmap <C-s> <C-C>:update<CR>
+imap <C-s> <C-O>:update<CR>
