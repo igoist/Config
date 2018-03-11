@@ -24,8 +24,8 @@ Plugin 'tpope/vim-fugitive'
 
 
 " ==== syntax helpers
-Plugin 'scrooloose/syntastic'
-"Plugin 'tpope/vim-surround'
+" Plugin 'scrooloose/syntastic'
+" Plugin 'tpope/vim-surround'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'othree/yajs.vim'
 Plugin 'mxw/vim-jsx'
@@ -48,7 +48,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 
 " ==== PLUGIN THEMES
-Plugin 'morhetz/gruvbox'
+" Plugin 'morhetz/gruvbox'
 " Plugin 'ryanoasis/vim-devicons'
 
 
@@ -65,15 +65,17 @@ set guifont=Menlo\ 10
 set fillchars+=vert:\$
 syntax enable
 set background=dark
-set ruler
-set hidden
-set number
+" set ruler
+" set hidden
+" set number
 set laststatus=2
 set smartindent
 set st=4 sw=4 et
-set shiftwidth=4
-set tabstop=4
-let &colorcolumn="80"
+set shiftwidth=2
+set tabstop=2
+set expandtab
+autocmd FileType js,jsx,css,scss,html,json  set shiftwidth=2 | set expandtab
+" let &colorcolumn = '80'
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
@@ -95,13 +97,13 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_mri_args = "--config=$HOME/.jshintrc"
-let g:syntastic_python_checkers = [ 'pylint', 'flake8', 'pep8', 'pyflakes', 'python']
-let g:syntastic_yaml_checkers = ['jsyaml']
+" let g:syntastic_python_checkers = [ 'pylint', 'flake8', 'pep8', 'pyflakes', 'python']
+" let g:syntastic_yaml_checkers = ['jsyaml']
 let g:syntastic_html_tidy_exec = 'tidy5'
 
 
@@ -144,10 +146,22 @@ set shortmess+=A
 
 
 " custom
+set hlsearch
+" control the behave of backspace
+" set backspace=indent,eol,start
 imap fd <Esc>
 let g:airline_theme = 'simple'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_alt_sep = ' '
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
 
 " key map
+nmap <C-h> <C-W>h
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-l> <C-W>l
 " nmap <C-s> :w<CR>
 nmap <C-s> :update<CR>
 vmap <C-s> <C-C>:update<CR>
