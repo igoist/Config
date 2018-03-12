@@ -9,14 +9,19 @@ call vundle#begin()
 " ==== plugin manager
 Plugin 'VundleVim/Vundle.vim'
 
+
 " ==== helpers
 " Plugin 'vim-scripts/L9'
+
 
 " ==== File tree
 Plugin 'scrooloose/nerdtree'
 
+
 " ==== Completion
 "Plugin 'Valloric/YouCompleteMe'
+Plugin 'mattn/emmet-vim'
+
 
 " ==== Git
 Plugin 'airblade/vim-gitgutter'
@@ -24,23 +29,27 @@ Plugin 'tpope/vim-fugitive'
 
 
 " ==== syntax helpers
-" Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 " Plugin 'tpope/vim-surround'
-Plugin 'cakebaker/scss-syntax.vim'
+" Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'othree/yajs.vim'
 Plugin 'mxw/vim-jsx'
+Plugin 'tpope/vim-commentary'
 
 " Plugin 'mitsuhiko/vim-jinja'
 " Plugin 'octol/vim-cpp-enhanced-highlight'
 " Plugin 'ap/vim-css-color'
 " Plugin 'Vimjas/vim-python-pep8-indent'
 
+
 " ==== moving / searching
 " Plugin 'easymotion/vim-easymotion'
 " Plugin 'kien/ctrlp.vim'
 
+
 " ==== snippets
 " -- Plugin 'SirVer/ultisnips' " It's for python, I don't need it
+
 
 " Status bar on bottom
 Plugin 'vim-airline/vim-airline'
@@ -48,11 +57,8 @@ Plugin 'vim-airline/vim-airline-themes'
 
 
 " ==== PLUGIN THEMES
-" Plugin 'morhetz/gruvbox'
+Plugin 'morhetz/gruvbox'
 " Plugin 'ryanoasis/vim-devicons'
-
-
-" ==== Custom Tmp
 
 
 call vundle#end()
@@ -61,8 +67,10 @@ filetype plugin indent on
 
 " ==== Colors and other basic settings
 colorscheme gruvbox
-set guifont=Menlo\ 10
-set fillchars+=vert:\$
+set guifont=Menlo\ 12
+set guifont=Menlo\ for\ Powerline\ 12
+" set guifont=Source\ Code\ Pro\ for\ Powerline
+set fillchars+=vert:\ 
 syntax enable
 set background=dark
 " set ruler
@@ -70,7 +78,7 @@ set background=dark
 " set number
 set laststatus=2
 set smartindent
-set st=4 sw=4 et
+" set st sw=2 et
 set shiftwidth=2
 set tabstop=2
 set expandtab
@@ -84,7 +92,7 @@ autocmd FileType js,jsx,css,scss,html,json  set shiftwidth=2 | set expandtab
 
 
 " ==== NERDTREE
-let NERDTreeIgnore = ['__pycache__', '\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp', '*\.swp', '\.swo', '\.swn', '\.swh', '\.swm', '\.swl', '\.swk', '\.sw*$', '[a-zA-Z]*egg[a-zA-Z]*', '.DS_Store']
+let NERDTreeIgnore = ['\.git', '\.sass-cache', 'node_modules', '__pycache__', '\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp', '*\.swp', '\.swo', '\.swn', '\.swh', '\.swm', '\.swl', '\.swk', '\.sw*$', '[a-zA-Z]*egg[a-zA-Z]*', '.DS_Store']
 let NERDTreeShowHidden = 1
 " let g:NERDTreeWinPos = 'left'
 let g:NERDTreeDirArrows = 0
@@ -93,21 +101,32 @@ map <C-t> :NERDTreeToggle<CR>
 
 
 " ==== Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
+let g:syntastic_javascript_checkers = ['standard']
+let g:syntastic_javascript_standard_generic = 1
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_mri_args = "--config=$HOME/.jshintrc"
+let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
+" let g:syntastic_javascript_eslint_exe = '[ -f $(npm bin)/eslint ] && $(npm bin)/eslint || eslint'
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
 " let g:syntastic_python_checkers = [ 'pylint', 'flake8', 'pep8', 'pyflakes', 'python']
 " let g:syntastic_yaml_checkers = ['jsyaml']
 let g:syntastic_html_tidy_exec = 'tidy5'
+let g:syntastic_scss_checkers=['']
+" autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
+" remember :SyntasticCheck :SyntasticToggleMode
+nmap <C-x> :SyntasticCheck<CR>
 
-
-" === flake8 for pyhton
+" ==== flake8 for pyhton
 " let g:flake8_show_in_file=1
 
 
@@ -150,11 +169,29 @@ set hlsearch
 " control the behave of backspace
 " set backspace=indent,eol,start
 imap fd <Esc>
-let g:airline_theme = 'simple'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-" let g:airline#extensions#tabline#left_alt_sep = ' '
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+" airline {{{
+  " if !exists('g:airline_symbols')
+  "   let g:airline_symbols = {}
+  " endif
+  " let g:airline_left_sep = ''
+  " let g:airline_left_alt_sep = '❯'
+  " let g:airline_right_sep = '◀'
+  " let g:airline_right_alt_sep = '❮'
+  " let g:airline_symbols.linenr = '¶'
+  " let g:airline_symbols.branch = '⎇'
+  " 是否打开tabline
+  " let g:airline#extensions#tabline#enabled = 1
+  let g:airline_theme = 'drak'
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#left_sep = ' '
+  let g:airline#extensions#tabline#left_alt_sep = ' '
+  let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+  let g:airline_powerline_fonts = 1
+" }}}
+
+
+" js, jsx part
+" let g:jsx_ext_required = 1
 
 
 " key map
@@ -166,3 +203,6 @@ nmap <C-l> <C-W>l
 nmap <C-s> :update<CR>
 vmap <C-s> <C-C>:update<CR>
 imap <C-s> <C-O>:update<CR>
+
+vnoremap > ><CR>gv
+vnoremap < <<CR>gv
