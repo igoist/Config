@@ -35,7 +35,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'othree/yajs.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-commentary'
-
+Plugin 'digitaltoad/vim-pug'
 " Plugin 'mitsuhiko/vim-jinja'
 " Plugin 'octol/vim-cpp-enhanced-highlight'
 " Plugin 'ap/vim-css-color'
@@ -96,6 +96,7 @@ syntax enable
 
 " custom key map
 imap fd <Esc>
+vmap fd <Esc>
 
 nmap <C-h> <C-W>h
 nmap <C-j> <C-W>j
@@ -107,8 +108,30 @@ nmap <C-s> :update<CR>
 vmap <C-s> <C-C>:update<CR>
 imap <C-s> <C-O>:update<CR>
 
+" indent
 vnoremap > ><CR>gv
 vnoremap < <<CR>gv
+
+" **line down, line up**
+nnoremap ô :m .+1<CR>
+nnoremap ˚ :m .-2<CR>
+inoremap ô <Esc>:m .+1<CR>
+inoremap ˚ <Esc>:m .-2<CR>
+vnoremap ô :m '>+1<CR>gv
+vnoremap ˚ :m '<-2<CR>gv
+
+" nnoremap ˚ :m .-2<CR>==
+" inoremap ô <Esc>:m .+1<CR>==gi
+" inoremap ˚ <Esc>:m .-2<CR>==gi
+" vnoremap ô :m '>+1<CR>gv=gv
+" vnoremap ˚ :m '<-2<CR>gv=gv
+
+" nnoremap <A-j> :m .+1<CR>==
+" nnoremap <A-k> :m .-2<CR>==
+" inoremap <A-j> <Esc>:m .+1<CR>==gi
+" inoremap <A-k> <Esc>:m .-2<CR>==gi
+" vnoremap <A-j> :m '>+1<CR>gv=gv
+" vnoremap <A-k> :m '<-2<CR>gv=gv
 
 
 " airline {{{
@@ -138,12 +161,16 @@ vnoremap < <<CR>gv
 
 
 " ==== NERDTREE
-let NERDTreeIgnore = ['\.git', '\.sass-cache', 'node_modules', '__pycache__', '\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp', '*\.swp', '\.swo', '\.swn', '\.swh', '\.swm', '\.swl', '\.swk', '\.sw*$', '[a-zA-Z]*egg[a-zA-Z]*', '.DS_Store']
+let NERDTreeIgnore = ['\.git$', '\.sass-cache', 'node_modules', '__pycache__', '\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp', '*\.swp', '\.swo', '\.swn', '\.swh', '\.swm', '\.swl', '\.swk', '\.sw*$', '[a-zA-Z]*egg[a-zA-Z]*', '.DS_Store']
 let NERDTreeShowHidden = 1
 " let g:NERDTreeWinPos = 'left'
 let g:NERDTreeDirArrows = 0
 map <C-t> :NERDTreeToggle<CR>
 " map <Space-p-t> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '❯'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeMapActivateNode = 'l'
+let g:NERDTreeMapCloseDir = 'h'
 
 
 " ==== Syntastic
