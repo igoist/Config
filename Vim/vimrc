@@ -93,6 +93,10 @@ autocmd FileType js,jsx,css,scss,html,json  set shiftwidth=2 | set expandtab
 :set lines=999 columns=999
 syntax enable
 
+set foldmethod=indent
+" set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 
 " custom key map
 imap fd <Esc>
@@ -161,6 +165,9 @@ vnoremap ˚ :m '<-2<CR>gv
 
 
 " ==== NERDTREE
+" the line below could automatically quit nerdtree if you quit the only file
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 let NERDTreeIgnore = ['\.git$', '\.sass-cache', 'node_modules', '__pycache__', '\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp', '*\.swp', '\.swo', '\.swn', '\.swh', '\.swm', '\.swl', '\.swk', '\.sw*$', '[a-zA-Z]*egg[a-zA-Z]*', '.DS_Store']
 let NERDTreeShowHidden = 1
 " let g:NERDTreeWinPos = 'left'
