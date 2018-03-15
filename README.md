@@ -3,33 +3,22 @@
 
 
 ## List
+
+* [(.)bash_profile](#bash_profile)
+* [(.)gitconfig](#gitconfig)
+* [(.)gitignore_globally](#gitignore_globally)
 * [Emacs](#emacs)
-
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
+* [Vim](#vim)
 
 
 
+<h3 id='vim'>Vim</h3>
 
+...
 
 
 <h3 id="emacs">Emacs -- 参考 ConfigEmacs</h3>
+
 <p>Begin with emacs-mac & spacemacs & Zola's</p>
 <p>混合配置的方案，等熟练了应该会再改进</p>
 <ul>
