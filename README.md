@@ -9,12 +9,10 @@
 * [(.)gitignore_globally](#gitignore_globally)
 * [Emacs](#emacs)
 * [Vim](#vim)
+* [Web](#web)
 
 
 
-<h3 id='vim'>Vim</h3>
-
-...
 
 
 <h3 id="emacs">Emacs -- 参考 ConfigEmacs</h3>
@@ -26,3 +24,22 @@
   <li><a href="https://github.com/syl20bnr/spacemacs" target="_blank" rel="noopener noreferrer">spacemacs</a></li>
   <li>zola's .spacemacs.d</li>
 </ul>
+
+
+<h3 id='vim'>Vim</h3>
+
+...
+
+**...**
+
+* (.)vimrc
+
+
+<h3 id='web'>Web</h3>
+
+...
+
+**...**
+
+* (.)csscomb.json
+* (.)scss-lint.yml
