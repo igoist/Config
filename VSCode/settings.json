@@ -1,0 +1,23 @@
+{
+    //-------- Search configuration --------
+
+    // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the files.exclude setting.
+    "search.exclude": {
+        "**/node_modules": true
+    },
+
+    //-------- Files configuration --------
+
+    // Configure glob patterns for excluding files and folders.
+    "files.exclude": {
+        "**/*.swn": true,
+        "**/*.swo": true,
+        "**/*.swp": true,
+        "**/node_modules": true,
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/.sass-cache/": true,
+        "**/*.map": true,
+        "**/packages": true
+    }
+}

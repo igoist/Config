@@ -1,4 +1,5 @@
 # Config 系统环境配置系列
+
 2017 年，未雨绸缪，提前为今后迁移做好准备
 
 
@@ -9,10 +10,8 @@
 * [(.)gitignore_globally](#gitignore_globally)
 * [Emacs](#emacs)
 * [Vim](#vim)
+* [VSCode](#vscode)
 * [Web](#web)
-
-
-
 
 
 <h3 id="emacs">Emacs -- 参考 ConfigEmacs</h3>
@@ -33,6 +32,16 @@
 **...**
 
 * (.)vimrc
+
+
+<h3 id='vscode'>VSCode</h3>
+
+...
+
+**...**
+
+* keybindings.json
+* settings.json
 
 
 <h3 id='web'>Web</h3>
