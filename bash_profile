@@ -38,7 +38,7 @@ export LECHUU_CONFIG=/Users/Egoist/Documents/Egoist/config
 alias zhishu='sh /Users/Egoist/.script/zhishu.sh'
 
 
-# 一些比较个性化的自定义
+# 一些比较个性化的自定义指令
 
 # SublimeText3 & Atom & VS Code & Chrome & vim
 alias q='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
@@ -63,7 +63,10 @@ alias gs='git status'
 alias gss='git status .'
 alias gp='git push'
 alias gps='git push origin master'
+alias gl='git log --graph'
 
+# Web 开发相关
+alias sl='scss-lint'
 
 # Shell前缀修改 \u@\h\w   ---  Egoist@et~ 😙😚😜😝😛😁😂
 export PS1="~: "
@@ -73,6 +76,7 @@ alias ~='cd ~'                                         # cd ~
 alias ~script='cd ~/.script'                           # 进入自己脚本 shell 文件夹
 alias ~egoist='cd ~/Documents/Egoist/'
 # alias ~c='cd /Users/Egoist/Documents/Egoist/C\ or\ C++\ File/'
+alias ~app='cd ~/Sites/Apps'
 alias ~c='cd /Users/Egoist/Config'
 alias ~n='cd /Users/Egoist/CP/ex/NodeJS'
 alias ~oc='cd /Users/Egoist/Documents/Egoist/Objective-C/'
