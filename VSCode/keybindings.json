@@ -16,4 +16,10 @@
                                      "when": "editorTextFocus" },
   { "key": "ctrl+]",                "command": "editor.unfold",
                                      "when": "editorTextFocus" },
+  { "key": "ctrl+z",                "command": "editor.foldRecursively",
+                                     "when": "editorTextFocus" },
+  { "key": "ctrl+c",                "command": "editor.fold",
+                                     "when": "editorTextFocus" },
+  { "key": "ctrl+a",                "command": "editor.unfold",
+                                     "when": "editorTextFocus" },
 ]
