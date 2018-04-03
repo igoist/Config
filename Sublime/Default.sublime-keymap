@@ -7,7 +7,6 @@
       "setting": "word_wrap"
     }
   },
-
   // cursor move like Vim
   {
     "keys": ["ctrl+h"],
@@ -41,7 +40,6 @@
       "forward": true
     }
   },
-
   // move by words
   {
     "keys": ["ctrl+b"],
@@ -59,7 +57,6 @@
       "forward": true
     }
   },
-
   // scroll lines
   {
     "keys": ["ctrl+e"],

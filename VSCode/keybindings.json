@@ -1,17 +1,21 @@
 [
+  // cursor move like Vim
   { "key": "ctrl+h",                "command": "cursorLeft",
-                                     "when": "editorTextFocus && !editorReadonly" },
+                                     "when": "editorTextFocus" },
   { "key": "ctrl+j",                "command": "cursorDown",
-                                     "when": "editorTextFocus && !editorReadonly" },
+                                     "when": "editorTextFocus" },
   { "key": "ctrl+k",                "command": "cursorUp",
-                                     "when": "editorTextFocus && !editorReadonly" },
+                                     "when": "editorTextFocus" },
   { "key": "ctrl+l",                "command": "cursorRight",
-                                     "when": "editorTextFocus && !editorReadonly" },
+                                     "when": "editorTextFocus" },
+  // scroll lines
   { "key": "ctrl+e",                "command": "cursorPageUp",
-                                     "when": "editorTextFocus && !editorReadonly" },
+                                     "when": "editorTextFocus" },
   { "key": "ctrl+y",                "command": "cursorPageDown",
-                                     "when": "editorTextFocus && !editorReadonly" },
+                                     "when": "editorTextFocus" },
+  // file save
   { "key": "ctrl+s",                "command": "workbench.action.files.save" },
+  // code fold & unfold
   { "key": "ctrl+[",                "command": "editor.foldRecursively",
                                      "when": "editorTextFocus" },
   { "key": "ctrl+]",                "command": "editor.unfold",
@@ -21,5 +25,10 @@
   { "key": "ctrl+c",                "command": "editor.fold",
                                      "when": "editorTextFocus" },
   { "key": "ctrl+a",                "command": "editor.unfold",
+                                     "when": "editorTextFocus" },
+  // move by words
+  { "key": "ctrl+w",                "command": "cursorWordEndRight",
+                                     "when": "editorTextFocus" },
+  { "key": "ctrl+b",                "command": "cursorWordStartLeft",
                                      "when": "editorTextFocus" },
 ]
