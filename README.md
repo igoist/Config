@@ -9,6 +9,7 @@
 * [(.)gitconfig](#gitconfig)
 * [(.)gitignore_globally](#gitignore_globally)
 * [Emacs](#emacs)
+* [Sublime](#sublime)
 * [Vim](#vim)
 * [VSCode](#vscode)
 * [Web](#web)
@@ -23,6 +24,15 @@
   <li><a href="https://github.com/syl20bnr/spacemacs" target="_blank" rel="noopener noreferrer">spacemacs</a></li>
   <li>zola's .spacemacs.d</li>
 </ul>
+
+
+<h3 id='sublime'>Sublime</h3>
+
+...
+
+**...**
+
+* Default.sublime-keymap (Remember that in ...SublimeInstallPath../Package/User/, ... now is just a soft link)
 
 
 <h3 id='vim'>Vim</h3>
