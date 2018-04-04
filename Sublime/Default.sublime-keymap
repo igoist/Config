@@ -71,5 +71,32 @@
     "args": {
       "amount": 1
     }
+  },
+  // file save
+  {
+    "keys": ["ctrl+s"],
+    "command": "save"
+  },
+  // code fold & unfold
+  {
+    "keys": ["ctrl+c"],
+    "command": "fold"
+  },
+  {
+    "keys": ["ctrl+a"],
+    "command": "unfold"
+  },
+  // <C-d>, <C-x>
+  {
+    "keys": ["ctrl+d"],
+    "command": "delete_word",
+    "args": {
+      "forward": true,
+      "sub_words": true
+    }
+  },
+  {
+    "keys": ["ctrl+x"],
+    "command": "right_delete",
   }
 ]
