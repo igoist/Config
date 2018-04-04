@@ -9,9 +9,9 @@
   { "key": "ctrl+l",                "command": "cursorRight",
                                      "when": "editorTextFocus" },
   // scroll lines
-  { "key": "ctrl+e",                "command": "cursorPageUp",
+  { "key": "ctrl+e",                "command": "scrollLineDown",
                                      "when": "editorTextFocus" },
-  { "key": "ctrl+y",                "command": "cursorPageDown",
+  { "key": "ctrl+y",                "command": "scrollLineUp",
                                      "when": "editorTextFocus" },
   // file save
   { "key": "ctrl+s",                "command": "workbench.action.files.save" },
@@ -30,5 +30,10 @@
   { "key": "ctrl+w",                "command": "cursorWordEndRight",
                                      "when": "editorTextFocus" },
   { "key": "ctrl+b",                "command": "cursorWordStartLeft",
+                                     "when": "editorTextFocus" },
+  // <C-d>, <C-x> as dw, x
+  { "key": "ctrl+d",                "command": "deleteWordRight",
+                                     "when": "editorTextFocus" },
+  { "key": "ctrl+x",                "command": "deleteRight",
                                      "when": "editorTextFocus" },
 ]

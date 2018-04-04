@@ -28,7 +28,7 @@
 
 <h3 id='sublime'>Sublime</h3>
 
-**Remember! It seems like that the VSCode's parser, with Sublime's parser we could add comment, tail comma in the settings file**
+**Remember! It seems like the VSCode's parser, with Sublime's parser we could add comment, tail comma in the settings file**
 
 And since I remove the old file, replace it with the soft link, I found that the changes would not take effect immediately, unless you restart Sublime/VSCode or change the soft link's name and rename it back.
 
