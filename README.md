@@ -8,11 +8,22 @@
 * [(.)bash_profile](#bash_profile)
 * [(.)gitconfig](#gitconfig)
 * [(.)gitignore_globally](#gitignore_globally)
+* [Chrome](#chrome)
 * [Emacs](#emacs)
 * [Sublime](#sublime)
 * [Vim](#vim)
 * [VSCode](#vscode)
 * [Web](#web)
+
+
+<h3 id="chrome">Chrome</h3>
+
+<p>包括配置、插件列表、Snippets 收录</p>
+
+**List**
+
+* Snippets
+  * ...
 
 
 <h3 id="emacs">Emacs -- 参考 ConfigEmacs</h3>
