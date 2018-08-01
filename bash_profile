@@ -48,6 +48,7 @@ alias r='vim'
 alias a='atom'
 alias c='open -a /Applications/Google\ Chrome.app'
 alias n='nodemon'
+alias p='prettier --write --config .prettierrc.json '
 
 # Python 编译简化
 alias py='python'
@@ -63,7 +64,7 @@ alias gs='git status'
 alias gss='git status .'
 alias gp='git push'
 alias gps='git push origin master'
-alias gl='git log --graph'
+alias gl='git log --graph --abbrev-commit --decorate --date=relative --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)" --all'
 
 # Web 开发相关
 alias sl='scss-lint'
@@ -126,18 +127,14 @@ alias jj='juejin'
 
 # yarn
 # export PATH="$PATH:/usr/local/Cellar/yarn/0.24.6/bin"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export CMAKE_PREFIX_PATH="/usr/local/Cellar/anaconda2"
 
-eval "$(pyenv virtualenv-init -)"
+# pyenv
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
-# added by Anaconda2 installer
-export PATH="/usr/local/Cellar/anaconda2/bin:$PATH"
-
+# eval "$(pyenv virtualenv-init -)"
 
 
 # new
 stty -ixon
-
