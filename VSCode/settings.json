@@ -25,5 +25,7 @@
     "**/.sass-cache/": true,
     "**/*.map": true,
     "**/packages": true
-  }
+  },
+
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
 }

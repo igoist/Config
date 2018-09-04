@@ -6,6 +6,8 @@
 ## List
 
 * [(.)bash_profile](#bash_profile)
+* [(.)zshrc](#zshrc)
+* [(.)tmux.conf](#tmux.conf)
 * [(.)gitconfig](#gitconfig)
 * [(.)gitignore_globally](#gitignore_globally)
 * [Chrome](#chrome)

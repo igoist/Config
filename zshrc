@@ -109,6 +109,8 @@ alias q='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
 alias e='/Applications/Sublime\ Text\ \(3083\).app/Contents/SharedSupport/bin/subl'
 alias r='vim'
 alias a='atom'
+alias b='bat'
+alias cat='bat'
 alias c='open -a /Applications/Google\ Chrome.app'
 alias n='nodemon'
 alias p='prettier --write --config .prettierrc.json '
@@ -185,3 +187,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 alias jj='juejin'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
