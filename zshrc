@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/Egoist/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -141,42 +141,44 @@ alias sl='scss-lint'
 alias ~='cd ~'                                         # cd ~
 alias ~script='cd ~/.script'                           # 进入自己脚本 shell 文件夹
 alias ~egoist='cd ~/Documents/Egoist/'
-# alias ~c='cd /Users/Egoist/Documents/Egoist/C\ or\ C++\ File/'
+# alias ~c='cd $HOME/Documents/Egoist/C\ or\ C++\ File/'
 alias ~app='cd ~/Sites/Apps'
-alias ~c='cd /Users/Egoist/Config'
-alias ~n='cd /Users/Egoist/CP/ex/NodeJS'
-alias ~oc='cd /Users/Egoist/Documents/Egoist/Objective-C/'
+alias ~c='cd $HOME/Config'
+alias ~n='cd $HOME/CP/ex/NodeJS'
+alias ~oc='cd $HOME/Documents/Egoist/Objective-C/'
 alias ~py='cd ~/Documents/Egoist/Python/'
 alias ~python='cd ~/Documents/Egoist/Python/'
 alias ~js='cd ~/Documents/Egoist/js/pure\ js'              # 该js目录做为一个 git repository 存放各种 js 代码，从 CodeReview 开始 # 17.02.19 转入 pure js
-alias ~blog='cd /Users/Egoist/Sites/blog-example/blog'     # 快速进入 blog 目录，往后可能直接通过脚本实现
-alias ~igoist='cd /Users/Egoist/Sites/igoist.github.io2'   # 不多解释
+alias ~blog='cd $HOME/Sites/blog-example/blog'     # 快速进入 blog 目录，往后可能直接通过脚本实现
+alias ~igoist='cd $HOME/Sites/igoist.github.io2'   # 不多解释
 alias ~l='cd ~/LeetCodes'
 alias ~ui='cd ~/Sites/igoist-preparation'
-alias ~wb='cd /Users/Egoist/Sites/Web/demos/'              # Web demos 常用目录
-alias ~draft='cd /Users/Egoist/Sites/Web/draft/'           # Web draft 常用目录
+alias ~wb='cd $HOME/Sites/Web/demos/'              # Web demos 常用目录
+alias ~draft='cd $HOME/Sites/Web/draft/'           # Web draft 常用目录
 
 
-alias ~at='cd /Users/Egoist/Sites/ant-design'                    # Ant-design
-alias ~rt='cd /Users/Egoist/Sites/React/demoApps/hello-world/'   # React
-alias ~rd='cd /Users/Egoist/Records'                             # Records 17.05.25
+alias ~at='cd $HOME/Sites/ant-design'                    # Ant-design
+alias ~rt='cd $HOME/Sites/React/demoApps/hello-world/'   # React
+alias ~rd='cd $HOME/Records'                             # Records 17.05.25
 
 alias ~esrc='cd ~/.eslintrc'                               # 进入 eslintrc 目录
+
+alias ~yg='cd $HOME/py/you-get'                             # 工具 you-get
 
 # ================ 分割线 ================
 # alias esrc~='e ~/.eslintrc/xxx.xxx'                       # 用 Sublime 打开 eslintrc.json
 
 
 # ================ 分割线 ================
-alias pdf='open /Users/Egoist/Documents/PDF'           # 直接打开 PDF 目录
+alias pdf='open $HOME/Documents/PDF'           # 直接打开 PDF 目录
 
 # ================ Python 脚本 ===========
-alias pyi='py /Users/Egoist/Documents/Egoist/Python/psutil-proj/Integrated.py'
+alias pyi='py $HOME/Documents/Egoist/Python/psutil-proj/Integrated.py'
 
 
 # ================ 分割线 ================
-# alias rd='sh /Users/Egoist/.script/record.sh'
-alias blog='sh /Users/Egoist/.script/blog.sh'
+# alias rd='sh $HOME/.script/record.sh'
+alias blog='sh $HOME/.script/blog.sh'
 
 # ================ 前端 ==================
 alias scss='sass style.scss:style.css --watch'
@@ -188,3 +190,6 @@ export NVM_DIR="$HOME/.nvm"
 
 alias jj='juejin'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# ================ 工具 ==================
+alias yg='$HOME/py/you-get/you-get'
