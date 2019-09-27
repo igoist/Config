@@ -97,9 +97,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
+export PATH=/usr/local/mongodb/bin:$PATH
 export PATH=${PATH}:/usr/local/mysql/bin
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH=/usr/local/opt/openssl/bin:$PATH
 
 # 一些比较个性化的自定义指令
 
@@ -114,6 +114,7 @@ alias cat='bat'
 alias c='open -a /Applications/Google\ Chrome.app'
 alias n='nodemon'
 alias p='prettier --write --config .prettierrc.json '
+alias ssss='sass sass/main.scss:css/main.css --watch'
 
 # Python 编译简化
 alias py='python'
@@ -128,6 +129,7 @@ alias gr='git remote'
 alias gs='git status'
 alias gss='git status .'
 alias gp='git push'
+alias gpo='git push origin'
 alias gps='git push origin master'
 alias gl='git log --graph --abbrev-commit --decorate --date=relative --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)" --all'
 
@@ -192,4 +194,19 @@ alias jj='juejin'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # ================ 工具 ==================
+alias nfl='grep "* " -r ~/Records/link_filed | nf'
 alias yg='$HOME/py/you-get/you-get'
+
+
+ss() {
+  declare q="$*"
+  curl --user-agent curl "https://v2en.co/${q// /%20}"
+}
+
+ss-sh() {
+  while echo -n "v2en> "
+  read -r input
+  [[ -n "$input" ]]
+  do v2 "$input"
+  done
+}
