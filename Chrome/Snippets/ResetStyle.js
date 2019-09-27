@@ -1,9 +1,17 @@
 var styleStr = `
-   * {
-     background-color: #2a2a2a!important;
-     border-color: #2a2a2a!important;
-     color: #86c797!important;
-   }
+  *,
+  *:before,
+  *:after {
+    background-color: #2a2a2a!important;
+    border-color: #2a2a2a!important;
+    color: #86c797!important;
+    box-shadow: none!important;
+    text-shadow: none!important;
+  }
+
+  hr {
+    border: none!important;
+  }
 `;
 //rgb(134, 199, 151)
 // text-decoration: line-through!important;
