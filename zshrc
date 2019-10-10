@@ -112,7 +112,10 @@ alias a='atom'
 alias b='bat'
 alias cat='bat'
 alias c='open -a /Applications/Google\ Chrome.app'
-alias n='nodemon'
+#alias n='nodemon'
+alias n='npm'
+alias nr='npm run'
+alias y='yarn'
 alias p='prettier --write --config .prettierrc.json '
 alias ssss='sass sass/main.scss:css/main.css --watch'
 
@@ -166,6 +169,9 @@ alias ~rd='cd $HOME/Records'                             # Records 17.05.25
 alias ~esrc='cd ~/.eslintrc'                               # 进入 eslintrc 目录
 
 alias ~yg='cd $HOME/py/you-get'                             # 工具 you-get
+
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles -boolean true & killall Finder'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -boolean false & killall Finder'
 
 # ================ 分割线 ================
 # alias esrc~='e ~/.eslintrc/xxx.xxx'                       # 用 Sublime 打开 eslintrc.json
