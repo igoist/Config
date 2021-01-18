@@ -4,11 +4,9 @@ x = app.page.pins;
 
 x = JSON.stringify(x, null, 2);
 
-var blob = new Blob([x], {type: 'text/json'}),
-
-e = document.createEvent('MouseEvents'),
-
-a = document.createElement('a');
+var blob = new Blob([x], { type: 'text/json' }),
+  e = document.createEvent('MouseEvents'),
+  a = document.createElement('a');
 
 a.download = fileName;
 
