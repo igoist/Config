@@ -13,6 +13,8 @@
                                      "when": "editorTextFocus" },
   { "key": "ctrl+y",                "command": "scrollLineUp",
                                      "when": "editorTextFocus" },
+  { "key": "ctrl+n",                "command": "scrollLineUp",
+                                     "when": "editorTextFocus" },
   // file save
   { "key": "ctrl+s",                "command": "workbench.action.files.save" },
   // code fold & unfold
