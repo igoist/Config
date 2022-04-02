@@ -1,6 +1,5 @@
 {
   "workbench.colorTheme": "Monokai",
-  "window.zoomLevel": 0,
   "typescript.check.npmIsInstalled": false,
   "extensions.ignoreRecommendations": false,
   "editor.tabSize": 2,
@@ -16,16 +15,38 @@
 
   // Configure glob patterns for excluding files and folders.
   "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.sass-cache/": true,
+    "**/*.map": true,
     "**/*.swn": true,
     "**/*.swo": true,
     "**/*.swp": true,
-    "**/node_modules": true,
-    "**/.git": true,
-    "**/.DS_Store": true,
-    "**/.sass-cache/": true,
-    "**/*.map": true,
-    "**/packages": true
+    "**/node_modules": true
   },
 
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "breadcrumbs.enabled": true,
+  "vim.foldfix": true,
+  "vim.useSystemClipboard": true,
+  "terminal.integrated.fontWeightBold": "normal",
+  "editor.fontWeight": "600",
+  "terminal.integrated.fontWeight": "600",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.enablePreview": false,
+  "dart.warnWhenEditingFilesOutsideWorkspace": false,
+  "iceworks.materialSources": [],
+  "iceworks.workspace": "/Users/Egoist/Sites/Apps/test_iceworks",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "json.maxItemsComputed": 50000,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "debug.javascript.autoAttachFilter": "disabled",
+  "editor.inlineSuggest.enabled": true
 }
